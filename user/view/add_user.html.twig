@@ -1,0 +1,35 @@
+{% extends 'inner-common.html.twig' %}
+
+{% block body %}
+<h2 class="page-header">Add User</h2>
+{{ form_start(form,{'attr': {'id': 'companyUserForm'}}) }}
+	<div class="row">
+		<div class="col-md-6">
+	    	{{ form_label(form.firstName) }}
+	    	{{ form_errors(form.firstName) }}
+	    	{{ form_widget(form.firstName) }}
+		</div>
+		<div class="col-md-6">
+	    	{{ form_label(form.lastName) }}
+	    	{{ form_errors(form.lastName) }}
+	    	{{ form_widget(form.lastName) }}
+		</div>
+		
+		<div class="col-md-6" style="display:none;">
+	    	{{ form_label(form.password.first) }}
+	    	{{ form_errors(form.password.first) }}
+	    	{{ form_widget(form.password.first) }}
+		</div>
+		<div class="col-md-6" style="display:none;">
+	    	{{ form_label(form.password.second) }}
+	    	{{ form_errors(form.password.second) }}
+	    	{{ form_widget(form.password.second) }}
+		</div>
+		<div class="col-md-12">
+	    	{{ form_label(form.email) }}
+	    	{{ form_errors(form.email) }}
+	    	{{ form_widget(form.email) }}
+		</div>
+	</div>
+  {{ form_end(form) }}
+{% endblock %}
